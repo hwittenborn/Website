@@ -5,14 +5,14 @@ name: Publish to server
 volumes:
 - name: webroot
   host:
-    path: /var/www/www.hunterwittenborn.me
+    path: /var/www/www.hunterwittenborn.me/
 
 steps:
 - name: Push code to directory
   image: ubuntu
   volumes:
   - name: webroot
-    path: /var/www/www.hunterwittenborn.me
+    path: /var/www/www.hunterwittenborn.me/
   commands:
     - rm /var/www/www.hunterwittenborn.me/* -R
-    - cp -r  * /var/www/www.hunterwittenborn.me
+    - cp -r  * /var/www/www.hunterwittenborn.me/
