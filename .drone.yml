@@ -2,13 +2,16 @@ kind: pipeline
 type: docker
 name: Publish to server
 
+volumes:
+- name: webroot
+  host:
+    path: /var/www/www.hunterwittenborn.me
+
 steps:
 - name: Push code to directory
   image: ubuntu
   volumes:
   - name: webroot
-    host:
-      path: /var/www/www.hunterwittenborn.me/
-    path: /var/www/www.hunterwittenborn.me/
+    path: /var/www/www.hunterwittenborn.me
   commands:
     - cp * /var/www/www.hunterwittenborn.me
