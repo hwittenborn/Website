@@ -16,3 +16,9 @@ steps:
   commands:
     - rm /var/www/www.hunterwittenborn.me/* -R
     - cp -r  * /var/www/www.hunterwittenborn.me/
+    - ls -A
+    - echo "${PWD}"
+    - cd ..
+    - echo "${PWD}"
+    - cd - && cd assets
+    - echo "${PWD}"
