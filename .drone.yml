@@ -14,4 +14,5 @@ steps:
   - name: webroot
     path: /var/www/www.hunterwittenborn.me
   commands:
-    - cp * /var/www/www.hunterwittenborn.me
+    - rm /var/www/www.hunterwittenborn.me/* -R
+    - cp -r  * /var/www/www.hunterwittenborn.me
