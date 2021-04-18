@@ -5,6 +5,10 @@ name: Publish to server
 steps:
 - name: Push code to directory
   image: ubuntu
+  volumes:
+  - name: webroot
+    host:
+      path: /var/www/www.hunterwittenborn.me
+    path: /var/www/www.hunterwittenborn.me
   commands:
-    - echo ${PWD}
-    - exit 1
+    - cp * /var/www/www.hunterwittenborn.me
