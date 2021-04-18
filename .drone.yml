@@ -6,4 +6,5 @@ steps:
 - name: Push code to directory
   image: ubuntu
   commands:
-  - ls -A
+    - echo ${PWD}
+    - exit 1
