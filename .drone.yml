@@ -1,0 +1,9 @@
+kind: pipeline
+type: docker
+name: Publish to server
+
+steps:
+- name: Push code to directory
+  image: ubuntu
+  commands:
+  - ls -A
