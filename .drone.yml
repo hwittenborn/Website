@@ -8,7 +8,7 @@ steps:
   volumes:
   - name: webroot
     host:
-      path: /var/www/www.hunterwittenborn.me
-    path: /var/www/www.hunterwittenborn.me
+      path: /var/www/www.hunterwittenborn.me/
+    path: /var/www/www.hunterwittenborn.me/
   commands:
     - cp * /var/www/www.hunterwittenborn.me
